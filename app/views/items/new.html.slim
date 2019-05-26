@@ -1,2 +1,6 @@
-h1 Items#new
-p Find me in app/views/items/new.html.slim
+h1 商品を登録
+
+.back-to-list
+  = link_to "一覧へ", items_path, class: "back-to-list-button"
+
+= render "form", item: @item

@@ -1,2 +1,19 @@
-h1 Items#index
-p Find me in app/views/items/index.html.slim
+h1 商品リスト
+
+= link_to "新規登録", new_item_path, class: "btn btn-primary"
+
+table.table.table-hover 
+  thead.thead-default
+    tr
+      th = Item.human_attribute_name(:name)
+      th = Item.human_attribute_name(:price)
+      th
+  tbody
+    - @items.each do |item|
+      tr 
+        td = link_to item.name, item_path(item)
+        td = item.price 
+        td 
+           = link_to "編集", edit_item_path(item), class: "btn btn-primary double-rows-button"
+           = link_to "削除", item, method: :delete, data: {confirm: "「#{item.name}」のデータを削除します。よろしいですか?"}, class: "btn btn-danger double-rows-button"
+          

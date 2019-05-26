@@ -15,3 +15,22 @@
     letter-spacing: 0.30rem;
   }
 }
+
+.back-to-list::after{
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.back-to-list{
+  
+  .back-to-list-button{
+    float: right;
+    display: inline-block;
+  }
+  
+}
+
+.double-rows-button{
+  margin-right: 10px;
+}

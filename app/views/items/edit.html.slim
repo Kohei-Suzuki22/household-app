@@ -1,2 +1,7 @@
-h1 Items#edit
-p Find me in app/views/items/edit.html.slim
+h1 商品のデータを編集
+
+.back-to-list
+  = link_to "一覧へ", items_path, class: "back-to-list-button"
+
+
+= render "form", item: @item

@@ -30,7 +30,7 @@ class ItemsController < ApplicationController
   
   def update 
     
-    if @item.update
+    if @item.update(item_params)
       flash[:success] = "商品のデータを更新しました。"
       redirect_to item_url(@item)
     else 

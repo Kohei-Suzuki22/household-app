@@ -1,0 +1,11 @@
+= form_with model: item, local: true do |f|
+  
+  = render "layouts/error", model: f.object
+  
+  .form-group 
+    = f.label :name 
+    = f.text_field :name, class:"form-control", id:"item_name"
+  .form-group 
+    = f.label :price 
+    = f.number_field :price, class:"form-control", id:"item_price"
+  = f.submit nil, class: "btn btn-primary"
