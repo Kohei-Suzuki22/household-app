@@ -1,0 +1,17 @@
+@charset "utf-8";
+
+.main {
+  margin-top: -20px;
+  margin-bottom: 20px;
+  width: 100%;
+  height: 250px;
+  background: url("/images/056367c689efc4689ba77d7a8b514510_m.jpg") center center no-repeat;
+  background-size: cover;
+  
+  h1{
+    color: rgba(0,0,0,0.6);
+    line-height: 250px;
+    font-size: 30px;
+    letter-spacing: 0.30rem;
+  }
+}
