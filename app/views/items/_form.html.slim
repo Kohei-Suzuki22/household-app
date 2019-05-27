@@ -8,4 +8,7 @@
   .form-group 
     = f.label :price 
     = f.number_field :price, class:"form-control", id:"item_price"
+  .form-group
+    = f.label :category
+    = f.text_field :category, class:"form-control", id:"item_category"
   = f.submit nil, class: "btn btn-primary"

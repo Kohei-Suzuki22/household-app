@@ -2,7 +2,6 @@ class UsersController < ApplicationController
   
   before_action :find_user, only: [:show, :edit, :update, :destroy]
   skip_before_action :login_required, only: [:new, :create]
-  # before_action :require_current_user, only: [:show, :edit, :update, :destroy]
   
   
   def show
@@ -57,6 +56,4 @@ class UsersController < ApplicationController
     redirect_to root_url unless @user == current_user
   end 
   
-  # def require_current_user
-  # end
 end

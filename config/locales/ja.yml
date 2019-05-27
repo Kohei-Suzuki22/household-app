@@ -15,6 +15,7 @@ ja:
         id: ID
         name: 商品名
         price: 値段 (円)
+        category: カテゴリー
         created_at: 登録日時
         updated_at: 更新日時
       user:

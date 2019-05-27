@@ -12,6 +12,9 @@ table.table.table-hover
     tr 
       th = Item.human_attribute_name(:price)
       td = @item.price    
+    tr
+      th = Item.human_attribute_name(:category)
+      td = @item.category
     tr 
       th = Item.human_attribute_name(:created_at)
       td = @item.created_at
