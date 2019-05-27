@@ -3,7 +3,14 @@ class ItemsController < ApplicationController
   before_action :find_item, only: [:show, :edit, :update, :destroy]
   
   def index
-    @items = current_user.items.all.recent
+    @target = params[:target] 
+    
+    if @target.blank?
+      @items = current_user.items.all.recent
+    else 
+      @items = current_user.items.where(category: @target)
+    end
+    
   end
 
   def show

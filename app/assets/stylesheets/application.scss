@@ -36,5 +36,32 @@
 }
 
 #add_new_item_button{
-  float: right;
+  // float: right;
+  
+  &:after{
+    content: "";
+    display: block;
+    clear: both;
+    
+  }
 }
+
+
+#search-target-category{
+  
+  .target_form{
+    display: inline-block;
+    margin: 0 auto;
+    width: 400px;
+  }
+  
+  .target_submit{
+    display: inline-block;
+    
+  }
+}
+
+#not_found_items{
+  margin-top: 80px;
+}
+

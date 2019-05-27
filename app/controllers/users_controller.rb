@@ -5,7 +5,6 @@ class UsersController < ApplicationController
   
   
   def show
-    # pry-byebug
   end
 
   def new

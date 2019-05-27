@@ -2,21 +2,28 @@ h1 商品リスト
 
 #add_new_item_button
   = link_to "新規登録", new_item_path, class: "btn btn-primary"
-
-table.table.table-hover 
-  thead.thead-default
-    tr
-      th = Item.human_attribute_name(:name)
-      th = Item.human_attribute_name(:price)
-      th = Item.human_attribute_name(:category)
-      th
-  tbody
-    - @items.each do |item|
-      tr 
-        td = link_to item.name, item_path(item)
-        td = item.price
-        td = item.category
-        td 
-           = link_to "編集", edit_item_path(item), class: "btn btn-info btn-sm double-rows-button"
-           = link_to "削除", item, method: :delete, data: {confirm: "「#{item.name}」のデータを削除します。よろしいですか?"}, class: "btn btn-danger btn-sm double-rows-button"
-          
+  
+.text-center#search-target-category
+  = form_with(url: items_path, method: :get, local: true, class:"target_form") do |f|
+    = f.text_field :target, class:"form-control", placeholder:"カテゴリで絞る"
+    = f.submit "検索", class: "btn btn-success target_submit"
+    
+- if @items.count == 0
+  p.text-center#not_found_items 該当するものは見つかりませんでした。
+- else 
+  table.table.table-hover 
+    thead.thead-default
+      tr
+        th = Item.human_attribute_name(:name)
+        th = Item.human_attribute_name(:price)
+        th = Item.human_attribute_name(:category)
+        th
+    tbody
+      - @items.each do |item|
+        tr 
+          td = link_to item.name, item_path(item)
+          td = item.price
+          td = item.category
+          td 
+             = link_to "編集", edit_item_path(item), class: "btn btn-info btn-sm double-rows-button"
+             = link_to "削除", item, method: :delete, data: {confirm: "「#{item.name}」のデータを削除します。よろしいですか?"}, class: "btn btn-danger btn-sm double-rows-button"
