@@ -3,4 +3,6 @@ class Item < ApplicationRecord
   validates :price, presence: true 
   
   belongs_to :user
+  
+  scope :recent, ->{order(created_at: :desc)}
 end

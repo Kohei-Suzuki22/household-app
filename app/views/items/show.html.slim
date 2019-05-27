@@ -20,5 +20,5 @@ table.table.table-hover
       td = @item.updated_at
       
 
-= link_to "編集", edit_item_path(@item), class: "btn btn-primary double-rows-button"
-= link_to "削除", @item, method: :delete, data: {confirm: "「#{@item.name}」のデータを削除します。よろしいですか?"}, class: "btn btn-danger double-rows-button"
+= link_to "編集", edit_item_path(@item), class: "btn btn-info  double-rows-button"
+= link_to "削除", @item, method: :delete, data: {confirm: "「#{@item.name}」のデータを削除します。よろしいですか?"}, class: "btn btn-danger  double-rows-button"

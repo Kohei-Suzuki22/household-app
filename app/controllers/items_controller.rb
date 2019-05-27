@@ -3,7 +3,7 @@ class ItemsController < ApplicationController
   before_action :find_item, only: [:show, :edit, :update, :destroy]
   
   def index
-    @items = current_user.items.all
+    @items = current_user.items.all.recent
   end
 
   def show

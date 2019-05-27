@@ -1,6 +1,7 @@
 h1 商品リスト
 
-= link_to "新規登録", new_item_path, class: "btn btn-primary"
+#add_new_item_button
+  = link_to "新規登録", new_item_path, class: "btn btn-primary"
 
 table.table.table-hover 
   thead.thead-default
@@ -14,6 +15,6 @@ table.table.table-hover
         td = link_to item.name, item_path(item)
         td = item.price 
         td 
-           = link_to "編集", edit_item_path(item), class: "btn btn-primary double-rows-button"
-           = link_to "削除", item, method: :delete, data: {confirm: "「#{item.name}」のデータを削除します。よろしいですか?"}, class: "btn btn-danger double-rows-button"
+           = link_to "編集", edit_item_path(item), class: "btn btn-info btn-sm double-rows-button"
+           = link_to "削除", item, method: :delete, data: {confirm: "「#{item.name}」のデータを削除します。よろしいですか?"}, class: "btn btn-danger btn-sm double-rows-button"
           
