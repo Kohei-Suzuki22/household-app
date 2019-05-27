@@ -6,5 +6,5 @@ class User < ApplicationRecord
                     format: {with: /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i}
   has_secure_password
   
-  has_many :items
+  has_many :items, dependent: :destroy
 end
