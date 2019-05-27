@@ -2,7 +2,26 @@
   = content_for :main do 
     .main
       h1.text-center Thank you for coming!
-
+  
+  h4.text-center 現在の状況
+      
+  table.table.table-bordered
+    thead
+      tr 
+        th 予算 (円)
+        th 支出合計 (円)
+        th 予算 - 支出(円)
+    tbody 
+      tr 
+        td = @budget 
+        td = @expense
+        - if @difference.blank?
+          td = @expense
+        - else
+          - if @difference >= 0 
+            td.color-blue = @difference
+          - else 
+            td.color-red = @difference
 - else 
   = content_for :main do 
     .main

@@ -6,6 +6,9 @@ table.table.table-hover
       th = User.human_attribute_name(:name)
       td = @user.name 
     tr 
+      th = User.human_attribute_name(:budget)
+      td = @user.budget
+    tr 
       th = User.human_attribute_name(:email)
       td = @user.email 
     tr 

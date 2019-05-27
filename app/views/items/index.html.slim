@@ -12,7 +12,7 @@ h1 商品リスト
   p.text-center#not_found_items 該当するものは見つかりませんでした。
 - else 
   table.table.table-hover 
-    thead.thead-default
+    thead
       tr
         th = Item.human_attribute_name(:name)
         th = Item.human_attribute_name(:price)
@@ -29,5 +29,5 @@ h1 商品リスト
              = link_to "削除", item, method: :delete, data: {confirm: "「#{item.name}」のデータを削除します。よろしいですか?"}, class: "btn btn-danger btn-sm double-rows-button"
 
 
-h4 合計支出
-p = @sum
+
+    

@@ -24,7 +24,7 @@
                 span.caret
               ul.dropdown-menu
                 li = link_to "ユーザの詳細", current_user,  data: { turbolinks: :false }
-                li = link_to "ユーザを編集", edit_user_path(current_user),  data: { turbolinks: :false }
+                li = link_to "予算の記入,ユーザの編集", edit_user_path(current_user),  data: { turbolinks: :false }
                 li.divider role="separator"
                 li = link_to "ログアウト", logout_path, method: :delete
           - else 
