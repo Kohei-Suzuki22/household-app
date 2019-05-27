@@ -10,8 +10,9 @@ header
         a.navbar-brand href="/" Household
       #example.collapse.navbar-collapse
         ul.nav.navbar-nav.navbar-right
-          li
-            a href="/signup" SignUp
-          li 
-            a href="/login" Login 
+          - if current_user
+            li.nav-item = link_to "ログアウト", logout_path, method: :delete
+          - else 
+            li.nav-item = link_to "新規登録", signup_path
+            li.nav-item = link_to "ログイン", login_path
         

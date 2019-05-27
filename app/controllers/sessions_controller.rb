@@ -1,5 +1,7 @@
 class SessionsController < ApplicationController
   
+  skip_before_action :login_required
+  
   def new
   end
   
@@ -9,6 +11,7 @@ class SessionsController < ApplicationController
     if @user&.authenticate(session_params[:password])
       session[:user_id] = @user.id 
       flash[:success] = "ログインしました。"
+      redirect_to root_url
     else 
       flash.now[:warning] = "ログインに失敗しました。"
       render :new 

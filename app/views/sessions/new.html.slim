@@ -1,2 +1,23 @@
-h1 Sessions#new
-p Find me in app/views/sessions/new.html.slim
+.text-center
+  h1 ログイン
+
+  .row 
+    .col-sm-6.col-sm-offset-3
+    
+      = form_with scope: :session, local: true do |f|
+        .form-group
+          = f.label :email, "メールアドレス"
+          = f.email_field :email, class:"form-control"
+        .form-group 
+          = f.label :password, "パスワード"
+          = f.password_field :password, class:"form-control"
+        = f.submit "ログイン", class: "btn btn-success btn-block"
+        
+        
+      .text-right.guest-login
+        = form_with scope: :session, local: true do |f|
+          .form-group
+            = f.hidden_field :email, value: "guest@ruby.ruby"
+            = f.hidden_field :password, value: "password"
+          = f.submit "ゲストとしてログインする", class: "btn btn-info btn-sm"
+        
