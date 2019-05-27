@@ -1,4 +1,9 @@
-= content_for :main do 
-  .main
-    h1.text-center 家計簿をつけよう
+- if logged_in?
+  h1 welcom
+
+
+- else 
+  = content_for :main do 
+    .main
+      h1.text-center 家計簿をつけよう
     
