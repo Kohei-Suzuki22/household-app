@@ -3,18 +3,18 @@ class ItemsController < ApplicationController
   before_action :find_item, only: [:show, :edit, :update, :destroy]
   
   def index
-    @items = Item.all
+    @items = current_user.items.all
   end
 
   def show
   end
 
   def new
-    @item = Item.new 
+    @item = current_user.items.new 
   end
   
   def create 
-    @item = Item.new(item_params)
+    @item = current_user.items.new(item_params)
     
     if @item.save 
       flash[:success] = "商品が新しく登録されました。"
@@ -49,7 +49,7 @@ class ItemsController < ApplicationController
   private 
   
   def find_item
-    @item = Item.find(params[:id])
+    @item = current_user.items.find(params[:id])
   end 
   
   def item_params
