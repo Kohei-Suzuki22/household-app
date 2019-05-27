@@ -10,8 +10,23 @@ header
         a.navbar-brand href="/" Household
       #example.collapse.navbar-collapse
         ul.nav.navbar-nav.navbar-right
-          - if current_user
-            li.nav-item = link_to "ログアウト", logout_path, method: :delete
+          - if logged_in?
+            li.dropdown
+              a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-huspopup="true" aria-expanded="false"
+                span.glyphicon.glyphicon-pencil aria-hidden="true" 家計簿をつける
+                span.caret
+              ul.dropdown-menu
+                li.nav-item = link_to "データを確認", items_path
+                li.nav-item = link_to "データを登録", new_item_path 
+            li.dropdown
+              a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-huspopup="true" aria-expanded="false"
+                span.glyphicon.glyphicon-user aria-hidden="true" マイページ
+                span.caret
+              ul.dropdown-menu
+                li.nav-item = link_to "ユーザの詳細", current_user
+                li.nav-item = link_to "ユーザを編集", edit_user_path(current_user)
+                li.divider role="separator"
+                li.nav-item = link_to "ログアウト", logout_path, method: :delete
           - else 
             li.nav-item = link_to "新規登録", signup_path
             li.nav-item = link_to "ログイン", login_path

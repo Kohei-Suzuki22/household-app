@@ -1,6 +1,7 @@
 - if logged_in?
-  h1 welcom
-
+  = content_for :main do 
+    .main
+      h1.text-center Thank you for coming!
 
 - else 
   = content_for :main do 

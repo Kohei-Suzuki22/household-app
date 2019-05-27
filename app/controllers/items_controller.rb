@@ -11,6 +11,8 @@ class ItemsController < ApplicationController
       @items = current_user.items.where(category: @target)
     end
     
+    @expense = @items.sum(:price)
+    
   end
 
   def show

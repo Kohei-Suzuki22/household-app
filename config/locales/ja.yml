@@ -20,6 +20,7 @@ ja:
         updated_at: 更新日時
       user:
         name: 名称
+        budget: 予算
         email: メールアドレス
         password: パスワード
         password_confirmation: パスワード(確認)
