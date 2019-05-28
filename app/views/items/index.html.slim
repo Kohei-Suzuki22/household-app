@@ -29,5 +29,7 @@ h1 商品リスト
              = link_to "削除", item, method: :delete, data: {confirm: "「#{item.name}」のデータを削除します。よろしいですか?"}, class: "btn btn-danger btn-sm double-rows-button"
 
 
-
+.outcome
+  span.text-right#total-expense 支出合計
+  span.text-right#value-expense = number_to_currency(@expense, unit:"￥")
     

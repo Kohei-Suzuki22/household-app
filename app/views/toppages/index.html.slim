@@ -13,15 +13,15 @@
         th 予算 - 支出(円)
     tbody 
       tr 
-        td = @budget 
-        td = @expense
+        td = number_to_currency(@budget, unit:"￥") 
+        td = number_to_currency(@expense, unit:"￥")
         - if @difference.blank?
-          td = @expense
+          td = number_to_currency(@expense, unit:"￥")
         - else
           - if @difference >= 0 
-            td.color-blue = @difference
+            td.color-blue = number_to_currency(@difference, unit:"￥")
           - else 
-            td.color-red = @difference
+            td.color-red = number_to_currency(@difference, unit:"￥")
 - else 
   = content_for :main do 
     .main

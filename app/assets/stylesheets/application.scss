@@ -72,3 +72,23 @@
 .color-red{
   background-color: #f2dede;
 }
+
+.outcome{
+  float: right;
+  height: 40px;
+  
+  #total-expense{
+    padding-right: 10px;
+    height: 30px;
+    border-right: 1px solid #ddd;
+    font-size: 25px;
+    display: inline-block;
+  }
+  #value-expense{
+    padding-left: 10px;
+    font-size: 20px;
+    display: inline-block;
+    height: 30px;
+  }
+  
+}
