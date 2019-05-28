@@ -1,7 +1,9 @@
 class UsersController < ApplicationController
   
   before_action :find_user, only: [:show, :edit, :update, :destroy]
+  before_action :defend_guest_from_destroy, only: [:destroy]
   skip_before_action :login_required, only: [:new, :create]
+  
   
   
   def show
@@ -54,5 +56,9 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
     redirect_to root_url unless @user == current_user
   end 
+  
+  def defend_guest_from_destroy 
+    redirect_to current_user if current_user == User.find(2)
+  end
   
 end
