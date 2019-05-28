@@ -31,6 +31,10 @@ household-app(家計簿アプリ)
 ![予算 － 支出](https://user-images.githubusercontent.com/47558898/58494577-5ca42800-81b0-11e9-9466-726affe63255.PNG)
 
 
+## used language 
+- Ruby 2.6.0 
+- Ruby on Rails 5.2.3
+- bootstrap3 
 
 ## Licence
 This software is released under the MIT License, see LICENSE.
