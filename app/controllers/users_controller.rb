@@ -32,7 +32,7 @@ class UsersController < ApplicationController
     
     if @user.update(user_params)
       flash[:success] = "ユーザデータを更新しました。"
-      redirect_to @user 
+      redirect_to root_url
     else 
       flash.now[:danger] = "ユーザデータの更新に失敗しました。"
       render :edit
