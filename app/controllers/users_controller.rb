@@ -17,8 +17,8 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
     
     if @user.save 
-      flash[:success] = "ユーザ「#{@user.name}」を登録しました。ようこそ!"
-      redirect_to root_url
+      flash[:success] = "ユーザ「#{@user.name}」を登録しました。ログインしてください。"
+      redirect_to login_url
     else 
       render :new 
     end 
