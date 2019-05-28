@@ -1,5 +1,6 @@
 household-app(家計簿アプリ)
 ====
+root_path_image
 
 Overview
 
