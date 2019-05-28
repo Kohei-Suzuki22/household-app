@@ -66,3 +66,7 @@ gem 'slim-rails'
 gem 'html2slim'
 gem 'bootstrap'
 gem "kaminari"
+
+group :production do
+  gem 'pg', '0.21.0'
+end
