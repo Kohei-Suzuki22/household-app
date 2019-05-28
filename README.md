@@ -5,7 +5,7 @@ household-app(家計簿アプリ)
 買ったものを登録して、合計支出をもとめることができます。
 
 
-![ホーム画面](https://github.com/Kohei-Suzuki22/household-app/issues/1#issue-449353241)
+![ホーム画面](https://user-images.githubusercontent.com/47558898/58493103-33ce6380-81ad-11e9-993c-5576dc4540aa.PNG)
 
 
 
