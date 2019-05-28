@@ -1,6 +1,6 @@
 household-app(家計簿アプリ)
 ====
-root_path_image
+https://github.com/Kohei-Suzuki22/household-app/issues/1#issue-449353241
 
 Overview
 
