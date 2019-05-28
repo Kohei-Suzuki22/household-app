@@ -65,3 +65,4 @@ gem 'pry-byebug', group: :development
 gem 'slim-rails'
 gem 'html2slim'
 gem 'bootstrap'
+gem "kaminari"

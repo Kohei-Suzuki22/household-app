@@ -4,14 +4,17 @@ class ItemsController < ApplicationController
   
   def index
     @target = params[:target] 
+    @page = params[:page]
+
     
     if @target.blank?
-      @items = current_user.items.all.recent
+      @items = current_user.items.all.recent.page(@page).per(8)
     else 
-      @items = current_user.items.where(category: @target)
+      @items = current_user.items.where(category: @target).recent.page(@page).per(8)
     end
     
     @expense = @items.sum(:price)
+    
     
   end
 
