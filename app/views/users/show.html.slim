@@ -1,4 +1,4 @@
-h1 ユーザの詳細
+h1.page-title ユーザの詳細
 
 table.table.table-hover
   tbody
@@ -17,7 +17,8 @@ table.table.table-hover
     tr 
       th = User.human_attribute_name(:updated_at)
       td = @user.updated_at
-      
-= link_to "編集", edit_user_path(@user), class: "btn btn-primary double-rows-button"
-= link_to "削除", @user, method: :delete, data: {confirm: "ユーザ「#{@user.name}」のデータを全て削除します。よろしいですか?"}, class: "btn btn-danger double-rows-button"
+
+.show-buttons
+  = link_to "編集", edit_user_path(@user), class: "btn btn-info double-rows-button"
+  = link_to "削除", @user, method: :delete, data: {confirm: "ユーザ「#{@user.name}」のデータを全て削除します。よろしいですか?"}, class: "btn btn-danger double-rows-button"
       

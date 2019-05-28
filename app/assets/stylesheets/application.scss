@@ -35,34 +35,44 @@
   margin-right: 10px;
 }
 
-#add_new_item_button{
-  // float: right;
+#items-row{
+  #items-list-title{
+    margin: 10px 0 0 15px;
+    float: left;
+  }
   
-  &:after{
-    content: "";
-    display: block;
-    clear: both;
-    
+  #add_new_item_button{
+    float: right;
+    display: inline-block;
+    margin-top: 20px;
+    margin-right: 20px;
   }
 }
+
 
 
 #search-target-category{
   
-  .target_form{
-    display: inline-block;
-    margin: 0 auto;
-    width: 400px;
-  }
+  width: 100%;
+  height: 40px;
+  margin: 20px 0 30px ;
   
-  .target_submit{
-    display: inline-block;
-    
+  .target_form{
+    margin: 0 auto;
+    #search-input{
+      display: block;
+    }
+    #target-submit{
+      display: inline-block;
+      margin: 10px;
+      height: 25px;
+      width:13%;
+    }
   }
 }
 
 #not_found_items{
-  margin-top: 80px;
+  margin: 80px 0;
 }
 
 .color-blue{
@@ -74,7 +84,6 @@
 }
 
 .outcome{
-  float: right;
   height: 40px;
   
   #total-expense{
@@ -89,6 +98,7 @@
     font-size: 20px;
     display: inline-block;
     height: 30px;
+    margin-right: 20px;
   }
   
 }
@@ -97,3 +107,6 @@ footer{
   margin-top: 40px;
 }
 
+.show-buttons{
+  float: right;
+}
