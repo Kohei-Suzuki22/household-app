@@ -1,4 +1,4 @@
-household-app(家計簿アプリ)
+household-app(家計簿アプリ):https://household-app.herokuapp.com/
 ====
 
 
@@ -7,7 +7,7 @@ household-app(家計簿アプリ)
 
 #### ホーム画面[1]
 ![ホーム画面](https://user-images.githubusercontent.com/47558898/58498856-e86e8200-81b9-11e9-8d4f-0ae0560277d3.PNG)
-[1]:https://household-app.herokuapp.com/
+
 
 ## Description
 アカウントを作成し、予算、買ったものなどを登録することで、予算-支出の計算が行われるようになっています。また、登録された買ったものは、カテゴリーごとに検索し、そのカテゴリーの合計支出を求めることなどもできます。
