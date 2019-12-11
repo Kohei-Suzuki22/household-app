@@ -1,5 +1,7 @@
-household-app(家計簿アプリ):https://household-app.herokuapp.com/
+household-app(家計簿アプリ)
 ====
+https://household-app.herokuapp.com/
+
 
 
 ## Overview
